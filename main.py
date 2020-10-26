@@ -10,7 +10,7 @@ def banner():
 `Ybo." 88b  d88   dPYb   88     88         88__dP   dPYb    YbdP  `Ybo." 
 o.`Y8b 88YbdP88  dP__Yb  88  .o 88  .o     88"""   dP__Yb    8P   o.`Y8b 
 8bodP' 88 YY 88 dP""""Yb 88ood8 88ood8     88     dP""""Yb  dP    8bodP' 
-                            Created by Gen X  Version 1.0.0 beta        ''')
+                            Created by Gen X  Version 1.0.2 beta        ''')
 
 
 
@@ -29,7 +29,7 @@ def menu():
     if choice == '1':
         androidpayloads()
     elif choice == '2':
-        Create_Win_payloadONE()
+        Windows_payloads()
         # print('[!] Windows payload are not availible yet...')
         # os.system('clear')
         menu()
@@ -40,7 +40,7 @@ def menu():
 
 def androidpayloads():
     print()
-    print('[+] Choice any type of Small malicious blocks code <3 !')
+    print('[+] Choice any type of Small malicious blocks of code <3 !')
     print()
     print('[1] Ip_address logger')
     print('[2] Folder Bomber')
@@ -62,7 +62,28 @@ def androidpayloads():
     else:
         print('Please Enter a valid number!')
 
+
+def Windows_payloads():
+    print()
+    print(Fore.RED+'[!] For now , there will be Only one payload for Windows..'+Style.RESET_ALL)
+    print('[+] More payloads will be added soon ..')
+    print()
+    print('[1] Big_deleter')
+    print('[00] Return to Main Menu ')
+    print()
+    choice = input('[+] Enter Your choice : ')
+    if choice == '1':
+        Create_Win_payloadONE()
+    elif choice == '00':
+        menu()
+    else:
+        print('Please Enter a valid number!')
+
+
+
+
 def Create_payloadONE():
+    print()
     email = input('[+] Enter Your email : ')
     passw = input('[+] Enter Your password : ')
     recv_email = input('[+] Enter email that payload will send to : ')
@@ -84,6 +105,7 @@ def Create_payloadONE():
             print(e)
 
 def Create_payloadTWO():
+    print()
     amount = input('[+] Enter any amount you want : ')
     folder_name = input('[+] Enter folder name : ')
     file_name = input('[+] Enter file_name : ')
@@ -103,6 +125,7 @@ def Create_payloadTWO():
             print(e)
 
 def Create_payloadTHREE():
+    print()
     file_name = input('[+] Enter file_name : ')
     ENGINE = androidpayloadengine()
     try:
@@ -135,6 +158,7 @@ def Create_payloadFOUR():
         print(e)
 
 def Create_Win_payloadONE():
+    print()
     file_name = input('[+] Enter file_name : ')
     ENGINE = WindowsPayloadEngine()
     try:
