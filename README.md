@@ -2,9 +2,7 @@
 
 > by GenX
 
-## Collection of Effective Small blocks of codes..
-
-Usage is very simple.
+## Usage
 
 ```
 pip3 install -r requirements.txt
