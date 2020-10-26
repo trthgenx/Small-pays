@@ -170,7 +170,8 @@ def Create_Win_payloadONE():
                 try:
                     os.system(f'pyinstaller {file_name}.py')
                     print()
-                    print(f'[+] Successfully converted into {file_name}.exe')
+                    if os.path.exists(f'dist\\{file_name}\\{file_name}.exe') or os.path.exists(f'dist\\{file_name}\\{file_name}'):
+                        print(f'[+] Successfully converted into {file_name}.exe')
                 except:
                     print()
                     print(Fore.RED+f'[!] ERROR.. {file_name}.py can\'t be converted to {file_name}.exe')
