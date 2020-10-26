@@ -4,10 +4,10 @@
 
 Usage is very simple.
 
-'''
+```
 pip3 freeze > requirements.txt
 git clone https://github.com/trthgenx/Small-pays.git
 cd Small-pays
 python main.py
 
-'''
+```
