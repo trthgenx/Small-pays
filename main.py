@@ -13,7 +13,7 @@ def banner():
 `Ybo." 88b  d88   dPYb   88     88         88__dP   dPYb    YbdP  `Ybo." 
 o.`Y8b 88YbdP88  dP__Yb  88  .o 88  .o     88"""   dP__Yb    8P   o.`Y8b 
 8bodP' 88 YY 88 dP""""Yb 88ood8 88ood8     88     dP""""Yb  dP    8bodP' 
-                            Created by Gen X  Version 1.0.2 beta        ''')
+                            Created by Gen X  Version 1.0.3 beta        ''')
 
 
 
