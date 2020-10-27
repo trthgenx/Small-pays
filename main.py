@@ -1,7 +1,10 @@
 import os
+
+from colorama import Fore, Style
+
 from androidpayloadengine import androidpayloadengine
 from windowsEngine import WindowsPayloadEngine
-from colorama import Fore,Style
+
 
 # banner
 def banner():
@@ -79,9 +82,6 @@ def Windows_payloads():
         menu()
     else:
         print('Please Enter a valid number!')
-
-
-
 
 def Create_payloadONE():
     print()
