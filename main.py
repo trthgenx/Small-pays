@@ -25,6 +25,7 @@ def menu():
     print(Style.RESET_ALL)
     print('[1] Android little payloads')
     print('[2] Windows payloads')
+    print('[0] Exit')
     choice = input('Enter Your choice : ')
     if choice == '1':
         androidpayloads()
@@ -33,7 +34,7 @@ def menu():
         # print('[!] Windows payload are not availible yet...')
         # os.system('clear')
         menu()
-    elif choice == '3':
+    elif choice == '0':
         exit()
     else:
         print('Please Enter a valid number!')
