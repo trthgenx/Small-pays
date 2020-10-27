@@ -9,9 +9,9 @@ out
 gen
 .idea/workspace.xml
 __pycache__/
-venv
-venv/include
-venv/bin
+venv/
+venv/include/
+venv/bin/
 venv/bin/chardetect
 venv/bin/macho_dump
 venv/bin/macho_find
@@ -23,7 +23,6 @@ venv/bin/pyi-grab_version
 venv/bin/pyi-makespec
 venv/bin/pyi-set_version
 venv/bin/pyinstaller
-venv/include/
 venv/lib/python3.9
 venv/lib/python3.9/site-packages/
 venv/lib/python3.9/site-packages/Naked/__pycache__/
